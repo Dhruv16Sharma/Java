@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class deci2bina
+{
+	public static void decimal2binary(int decinum)
+	{
+		int pow = 0;
+		int binanum = 0;
+		int mynum = decinum;
+		while(decinum>0)
+		{
+			int rem = decinum%2;
+			binanum = binanum + (rem * (int)Math.pow(10,pow));
+			pow++;
+			decinum=decinum/2;
+		}
+		System.out.println("Binary conversion of "+mynum+" is: "+binanum);
+	}	
+	public static void main(String[] args)
+	{
+	  int decinum = 5;
+	  decimal2binary(decinum);
+	}
+}
