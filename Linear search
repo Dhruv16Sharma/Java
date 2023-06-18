@@ -1,0 +1,35 @@
+import java.util.*;
+public class linearsc
+{
+	public static int linearsearch(int num[],int find)
+	{
+		for(int i=0;i<num.length;i++)
+		{
+			if(num[i]==find)
+				return i;
+		}
+				return -1;
+	}
+	public static void main(String[] args)
+	{
+	   Scanner sc = new Scanner(System.in);
+	  int num[] = new int[10];
+      
+	  System.out.println("Enter 10 elements of array:");
+	  for(int i=0;i<10;i++)
+	  {
+		  num[i]=sc.nextInt();
+	  }
+	  System.out.println("Enter the number you want to search in array:");
+	  int find = sc.nextInt();
+      int index = linearsearch(num,find);
+	  if(index == -1)
+	  {
+		System.out.println("NOT FOUND"); 
+	}
+      else
+	  {
+		  System.out.println("Key is at index: "+index);
+	  }
+}
+}
