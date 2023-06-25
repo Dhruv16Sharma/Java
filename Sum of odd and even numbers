@@ -1,0 +1,29 @@
+import java.util.*;
+public class odevesum{
+  
+  public static void main(String args[]){
+	  Scanner sc = new Scanner(System.in);
+	  int num, evensum = 0,oddsum = 0,choice;
+	  do{
+		  
+		  System.out.println("Enter any number:");
+		  num = sc.nextInt();
+		  
+			if(num%2 == 0){
+				
+				evensum += num;
+			}
+			else{
+				
+			oddsum += num;	
+			}	
+			  
+			 System.out.println("If you want to continue press 1 else press 0:");
+			 choice = sc.nextInt();
+			   
+		  }while(choice == 1);
+	  System.out.println("Sum of entered even numbers:"+evensum);
+      System.out.println("Sum of entered odd numbers:"+oddsum);  
+  }
+  
+}
