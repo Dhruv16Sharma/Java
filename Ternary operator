@@ -1,0 +1,10 @@
+public class ternary{
+ 
+ public static void main(String[] args)
+ {
+   int num = 9;
+   String var = (num>10)?"True":"False";
+   System.out.println(var);
+   
+ }
+}
