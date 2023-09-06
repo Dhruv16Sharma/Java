@@ -1,0 +1,26 @@
+public class DuplicateString {
+    
+    static void strduplicate(String str, int index ,StringBuilder newstr,boolean map[])
+    {
+      if(index==str.length())
+      {
+        System.out.println(newstr);
+        return;
+      }
+      char currentchar = str.charAt(index); 
+      if(map[currentchar - 'a'] == true)
+        {// means it have a duplicate char
+        strduplicate(str, index+1, newstr, map);
+        }
+        else{
+            map[currentchar - 'a'] = true;
+            strduplicate(str, index+1, newstr.append(currentchar), map);
+        }
+
+    }
+    
+    public static void main(String[] args) {
+        String str = "apnacollege";
+        strduplicate(str, 0, new StringBuilder(""),new boolean[26]);
+    }
+}
