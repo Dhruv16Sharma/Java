@@ -1,0 +1,16 @@
+public class Lastoccurence {
+    
+    public static int lastoccur(int arr[],int i,int key)
+    {
+        if(i==-1|| arr[i]==key)
+            return i;
+         return lastoccur(arr, i-1, key); 
+    }
+    
+    public static void main(String[] args) {
+        int arr[] = {1,2,3,4,12,2,2,3};
+
+        System.out.println(lastoccur(arr, arr.length-1, 9));
+    }
+    
+}
